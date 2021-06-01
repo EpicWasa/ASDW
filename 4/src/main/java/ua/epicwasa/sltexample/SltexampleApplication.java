@@ -43,8 +43,8 @@ public class SltexampleApplication {
             writerFactory.getWriter(FileType.TXT).write(teaShop, "teaShop");
             writerFactory.getWriter(FileType.DAT).write(teaShop, "teaShop");
 
-            new TxtTeaShopReportGenerator().generateReport(teaShop, "txtReport");
-            new HtmlTeaShopReportGenerator().generateReport(teaShop, "txtReport");
+            new TxtTeaShopReportGenerator().generateReport(teaShop, "txtReport.txt");
+            new HtmlTeaShopReportGenerator().generateReport(teaShop, "htmlReport.html");
 
             TeaShop secondTeaShop = TeaShop.getInstance();
             secondTeaShop.setTeas(null);

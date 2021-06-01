@@ -1,0 +1,38 @@
+		Report		
+Mon May 31 15:02:33 EEST 2021
+The teashop has the following stock:
+
+TeaShop: {
+stock:[Tea:{
+name: earl_gray
+origin: britain
+sort: Sort: {
+name: black_tea
+prefferred temperature: 95
+}
+}, Tea:{
+name: flying_dragon
+origin: china
+sort: Sort: {
+name: green_tea
+prefferred temperature: 80
+}
+}, Tea:{
+name: green_melisa
+origin: japan
+sort: Sort: {
+name: green_tea
+prefferred temperature: 80
+}
+}, Tea:{
+name: sausep
+origin: india
+sort: Sort: {
+name: white_tea
+
+prefferred temperature: 90
+}
+}]
+}
+
+Makieiev Maksym, 2018ge		National Technical University "Kharkiv Polythechnical University"

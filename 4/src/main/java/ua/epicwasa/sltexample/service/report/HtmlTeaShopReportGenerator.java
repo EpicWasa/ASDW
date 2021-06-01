@@ -68,14 +68,4 @@ public class HtmlTeaShopReportGenerator extends TeaShopReportGenerator {
         return "</body>\n" + "</html>";
     }
 
-    @Override
-    protected void save(String data, String filename) {
-        try(FileWriter writer = new FileWriter(filename + ".html")){
-
-            writer.write(data);
-
-        }catch (Exception e){
-            System.out.println("Cant write to file "+ filename);
-        }
-    }
 }

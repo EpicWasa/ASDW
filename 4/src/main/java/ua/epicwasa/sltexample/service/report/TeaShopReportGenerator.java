@@ -1,11 +1,12 @@
 package ua.epicwasa.sltexample.service.report;
 
+import java.io.FileWriter;
 import ua.epicwasa.sltexample.entity.TeaShop;
 
 public abstract class TeaShopReportGenerator {
 
-    public void generateReport(TeaShop content, String reportName){
-        save(getHeader() + getBody(content) + getFooter(), reportName);
+    public final void generateReport(TeaShop content, String reportFileName){
+        save(getHeader() + getBody(content) + getFooter(), reportFileName);
     }
 
     protected abstract String getHeader();
@@ -14,6 +15,13 @@ public abstract class TeaShopReportGenerator {
 
     protected abstract String getFooter();
 
-    protected abstract void save(String data, String filename);
+    private static void save(String data, String filename){
+        try(FileWriter writer = new FileWriter(filename)){
 
+            writer.write(data);
+
+        }catch (Exception e){
+            System.out.println("Cant write to file "+ filename);
+        }
+    }
 }
